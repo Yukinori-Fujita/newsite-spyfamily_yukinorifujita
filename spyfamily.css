@@ -16,9 +16,10 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(5, 128, 73, 0.113);
+  background-color: rgba(5, 128, 73, 0.639);
   padding: 30px;
   position: fixed;
+  z-index: 1;
   width: 100%;
 }
 
@@ -408,6 +409,7 @@ small {
 /* favorite */
 .container-fv {
   display: flex;
+  align-items: center;
   /* justify-content: space-around; */
   margin-bottom: 200px;
 }
@@ -419,7 +421,8 @@ small {
 .container-fv p {
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: 300px;
+  padding: 30px;
+  /* margin-top: 300px; */
   font-size: 30px;
   color: white;
   background-color: rgba(0, 0, 0, 0.1);
@@ -579,6 +582,7 @@ span {
   .container-fv p {
     margin-top: 100px;
     padding: 10px;
+    font-size: 20px;
   }
 
   .container-fv img {
