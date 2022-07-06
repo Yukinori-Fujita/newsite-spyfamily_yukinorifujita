@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/* ここからheader */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(5, 128, 73, 0.639);
+  padding: 30px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  header .header-right {
+    font-size: 13px;
+    position: fixed;
+    top: 85px;
+    right: -250px;
+    color: white;
+    transition: right 1s ease;
+  }
+}
+
+header .header-right ul {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  header .header-right ul {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .header-right ul a {
+    padding-bottom: 20px;
+  }
+}
+
+header .header-right ul li {
+  font-size: 20px;
+  font-family: 'Libre Bodoni', serif;
+  margin-left: 30px;
+  color: red;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+header .header-right ul li::before {
+  background: black;
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+
+header .header-right ul li:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 767px) {
+  header .bun {
+    width: 30px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .bun .pate {
+    width: 100%;
+    height: 5px;
+    display: block;
+    background-color: grey;
+    border: 2px;
+    transition: all 1s ease;
+    position: relative;
+    top: calc(50% - 2px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .bun .pate::before, header .bun .pate::after {
+    width: 100%;
+    height: 5px;
+    display: block;
+    background-color: grey;
+    border: 2px;
+    transition: all 1s ease;
+    position: absolute;
+    content: '';
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .bun .pate::before {
+    top: -9px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .bun .pate::after {
+    top: 9px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #hamburger:checked + .bun .pate {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #hamburger:checked + .bun .pate::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #hamburger:checked + .bun .pate::after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header #hamburger:checked ~ .header-right {
+    right: 0;
+  }
+}
+
+#title source {
+  background-size: cover;
+  background-position: center;
+}
+
+#title img {
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  padding: 50px;
+  font-size: 40px;
+  color: white;
+  font-family: 'Libre Bodoni', serif;
+}
+
+.main-story {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.main-story li {
+  font-size: 20px;
+  color: white;
+}
+
+.container-chara {
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-chara-all {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fileter {
+  height: 400px;
+  width: 100%;
+  background-color: rgba(255, 0, 132, 0.65);
+  position: absolute;
+  top: 0;
+  right: -101%;
+  transition: all 0.5s ease;
+}
+
+.chara-text {
+  width: 110px;
+  height: 100px;
+  position: absolute;
+  top: 180px;
+  left: -80%;
+  color: white;
+  transition: all 0.5s ease;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+#loid-name, #anya-name, #yoru-name {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100% / 4);
+  height: 400px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#loid-name:hover .chara-text, #anya-name:hover .chara-text, #yoru-name:hover .chara-text {
+  left: 27%;
+}
+
+#loid-name:hover .fileter, #anya-name:hover .fileter, #yoru-name:hover .fileter {
+  right: 0;
+}
+
+#anya-name:hover .chara-text {
+  left: 27%;
+}
+
+#anya-name:hover .fileter {
+  right: 0;
+}
+
+#yoru-name:hover .chara-text {
+  left: 27%;
+}
+
+#yoru-name:hover .fileter {
+  right: 0;
+}
+
+#loid, #anya, #yoru {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+#loid .loid, #anya .loid, #yoru .loid, #anya .anya, #yoru .yoru {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.character-text {
+  font-size: 30px;
+  font-family: 'Reggae One', cursive;
+  /* margin-bottom: 50px; */
+}
+
+.character-text li {
+  margin-bottom: 30px;
+  color: white;
+}
+
+.container-fv {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin-bottom: 200px;
+}
+
+.container-fv img {
+  margin-left: 50px;
+}
+
+.container-fv p {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 30px;
+  /* margin-top: 300px; */
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container-fv small {
+  color: red;
+}
+
+.container-song {
+  margin-bottom: 100px;
+}
+
+.container-song ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-song .ohige {
+  flex-direction: row-reverse;
+}
+
+.container-song .hosinogen {
+  margin-left: 30px;
+}
+
+.container-song .hige {
+  margin-right: 30px;
+}
+
+.container-song .songtitle {
+  font-size: 20px;
+  color: white;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  background-color: aqua;
+  padding: 30px;
+}
+
+footer span {
+  font-size: 20px;
+}
+
+.animation {
+  opacity: 0;
+  visibility: hidden;
+  transition: 2s;
+  transform: translateY(30px);
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/*# sourceMappingURL=spyfamily.css.map */

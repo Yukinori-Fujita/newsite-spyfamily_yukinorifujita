@@ -1,0 +1,406 @@
+// レスポンシブ
+@mixin sp-screen {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+/* ここからheader */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(5, 128, 73, 0.639);
+  padding: 30px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+
+  .header {
+    &-right {
+      @include sp-screen {
+        font-size: 13px;
+        position: fixed;
+        top: 85px;
+        right: -250px;
+        color: white;
+        transition: right 1s ease;
+      }
+
+      ul {
+        display: flex;
+
+        @include sp-screen {
+          display: block;
+        }
+
+        a {
+          @include sp-screen {
+            padding-bottom: 20px;
+          }
+        }
+
+        li {
+          font-size: 20px;
+          font-family: 'Libre Bodoni', serif;
+          margin-left: 30px;
+          color: red;
+          padding-bottom: 5px;
+          position: relative;
+
+          &::before {
+            background: black;
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            transform-origin: right top;
+            transform: scale(0, 1);
+            transition: transform .3s;
+          }
+
+          &:hover::before {
+            transform-origin: left top;
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+
+  // ハンバーガーメニュー
+  .bun {
+    @include sp-screen {
+      width: 30px;
+      height: 30px;
+      display: block;
+      cursor: pointer;
+    }
+
+    .pate {
+      @include sp-screen {
+        width: 100%;
+        height: 5px;
+        display: block;
+        background-color: grey;
+        border: 2px;
+        transition: all 1s ease;
+        position: relative;
+        top: calc(50% - 2px);
+      }
+
+      &::before,
+      &::after {
+        @include sp-screen {
+          width: 100%;
+          height: 5px;
+          display: block;
+          background-color: grey;
+          border: 2px;
+          transition: all 1s ease;
+          position: absolute;
+          content: '';
+        }
+      }
+
+      &::before {
+        @include sp-screen {
+          top: -9px;
+        }
+      }
+
+      &::after {
+        @include sp-screen {
+          top: 9px;
+        }
+      }
+
+    }
+  }
+
+  #hamburger:checked+.bun .pate {
+    @include sp-screen {
+      background-color: transparent;
+    }
+
+    &::before {
+      @include sp-screen {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+    }
+
+    &::after {
+      @include sp-screen {
+        transform: rotate(-45deg) translate(7px, -8px);
+      }
+    }
+  }
+
+  #hamburger:checked~.header-right {
+    @include sp-screen {
+      right: 0;
+    }
+  }
+}
+
+// ここからtitle
+#title {
+  source {
+    background-size: cover;
+    background-position: center;
+  }
+
+  img {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+// 共通
+h1 {
+  text-align: center;
+  padding: 50px;
+  font-size: 40px;
+  color: white;
+  font-family: 'Libre Bodoni', serif;
+}
+
+// ここからstory
+.main-story {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  li {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+// ここからcharacter
+.container-chara {
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-chara-all {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+// 共通部分
+// フィルター
+.fileter {
+  height: 400px;
+  width: 100%;
+  background-color: rgba(255, 0, 132, 0.65);
+  position: absolute;
+  top: 0;
+  right: -101%;
+  transition: all 0.5s ease;
+}
+
+// キャラクターテキスト
+.chara-text {
+  width: 110px;
+  height: 100px;
+  position: absolute;
+  top: 180px;
+  left: -80%;
+  color: white;
+  transition: all 0.5s ease;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+//  共通部分ここまで
+
+// ロイド
+#loid-name {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100% / 4);
+  height: 400px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .chara-text {
+      left: 27%;
+    }
+
+    .fileter {
+      right: 0;
+    }
+  }
+}
+
+// アーニャ
+#anya-name {
+  @extend #loid-name;
+
+  &:hover {
+    .chara-text {
+      left: 27%;
+    }
+
+    .fileter {
+      right: 0;
+    }
+  }
+}
+
+// ヨル
+#yoru-name {
+  @extend #loid-name;
+
+  &:hover {
+    .chara-text {
+      left: 27%;
+    }
+
+    .fileter {
+      right: 0;
+    }
+  }
+}
+
+// ロイド説明
+#loid {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+
+  .loid {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+}
+
+// アーニャ説明
+#anya {
+  @extend #loid;
+
+  .anya {
+    @extend .loid;
+  }
+}
+
+// ヨル説明
+#yoru {
+  @extend #loid;
+
+  .yoru {
+    @extend .loid;
+  }
+}
+
+// 共通
+.character-text {
+  font-size: 30px;
+  font-family: 'Reggae One', cursive;
+  /* margin-bottom: 50px; */
+
+  li {
+    margin-bottom: 30px;
+    color: white;
+  }
+}
+// ここまで共通
+
+//  favorite
+.container-fv {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin-bottom: 200px;
+
+  img {
+    margin-left: 50px;
+  }
+
+  p {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 30px;
+    /* margin-top: 300px; */
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  small {
+    color: red;
+  }
+}
+
+// song
+.container-song {
+  margin-bottom: 100px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ohige {
+    flex-direction: row-reverse;
+  }
+
+  .hosinogen {
+    margin-left: 30px;
+  }
+
+  .hige {
+    margin-right: 30px;
+  }
+
+  .songtitle {
+    font-size: 20px;
+    color: white;
+    margin: 0 auto;
+  }
+}
+
+// footer
+footer {
+  text-align: center;
+  background-color: aqua;
+  padding: 30px;
+
+  span {
+    font-size: 20px;
+  }
+}
+
+// アニメーション要素のスタイル
+.animation {
+  opacity: 0;
+  visibility: hidden;
+  transition: 2s;
+  transform: translateY(30px);
+}
+
+// アニメーション要素までスクロールした時のスタイル
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

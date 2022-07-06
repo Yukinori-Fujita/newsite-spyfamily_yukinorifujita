@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="spyfamily.css">
+  <link rel="stylesheet" href="./assets/css/spyfamily.css">
   <title>spy family</title>
 </head>
 
@@ -35,7 +36,7 @@
   </header>
   <main>
     <!-- main title -->
-    <section class="title">
+    <section id="title" class="animation">
       <picture>
         <source media="(max-width: 780px)" srcset="img/spyfamily-background.jpeg" height="800px">
         <img src="./img/spyfamily.jpeg" alt="spyfamily" width="100%">
@@ -53,78 +54,28 @@
     </section>
 
     <!-- character -->
-    <section>
+    <section id="character-animation" class="animation">
       <h1 id="character">CHARACTER</h1>
       <div class="container-chara slide-paused" ontouchstart="">
-        <ul class="slideshow">
-          <li>
-            <a href="#loid"><div class="explanation-chara1"></div></a>
-            <img src="./img/IMG_2115.jpg" alt="loid" width="235px" height="580px">
-          </li>
-          <li>
-            <a href="#anya"><div class="explanation-chara2"></div></a>
-            <img src="./img/IMG_2116.jpg" alt="anya" width="235px" height="580px">
-          </li>
-          <li>
-            <a href="#yoru"><div class="explanation-chara3"></div></a>
-            <img src="./img/IMG_2117.jpg" alt="yoru" width="235px" height="580px">
-          </li>
-          <!-- <ul class="slideshow">
-          <li>
-            <a href="#loid">ロイド<img src="./img/IMG_2115.jpg" alt="loid" width="235px" height="580px"></a>
-          </li>
-          <li>
-            <a href="#anya">アーニャ<img src="./img/IMG_2116.jpg" alt="anya" width="235px" height="580px"></a>
-          </li>
-          <li>
-            <a href="#yoru">ヨル<img src="./img/IMG_2117.jpg" alt="yoru" width="235px" height="580px"></a>
-          </li>
-        <ul class="slideshow">
-          <li>
-            <a href="#loid">ロイド<img src="./img/IMG_2115.jpg" alt="loid" width="235px" height="580px"></a>
-          </li>
-          <li>
-            <a href="#anya">アーニャ<img src="./img/IMG_2116.jpg" alt="anya" width="235px" height="580px"></a>
-          </li>
-          <li>
-            <a href="#yoru">ヨル<img src="./img/IMG_2117.jpg" alt="yoru" width="235px" height="580px"></a>
-          </li> -->
-          <!-- <li>
-            <a href="#anya">アーニャ</a>
-            <img src="./img/IMG_2116.jpg" alt="anya" width="235px" height="580px">
-          </li>
-          <li>
-            <a href="#yoru">ヨル</a>
-            <img src="./img/IMG_2117.jpg" alt="yoru" width="235px" height="580px">
-          </li>
-        </ul>
-        <ul class="slideshow">
-          <li>
-            <a href="#loid">ロイド</a>
-            <img src="./img/IMG_2115.jpg" alt="loid" width="235px" height="580px">
-          </li>
-          <li>
-            <a href="#anya">アーニャ<img src="./img/IMG_2116.jpg" alt="anya" width="235px" height="580px"></a>
-          </li>
-          <li>
-            <a href="#yoru">ヨル</a>
-            <img src="./img/IMG_2117.jpg" alt="yoru" width="235px" height="580px">
-          </li>
-        </ul>
-        <ul class="slideshow">
-          <li>
-            <a href="#loid">ロイド</a>
-            <img src="./img/IMG_2115.jpg" alt="loid" width="235px" height="580px">
-          </li>
-          <li>
-            <a href="#anya">アーニャ</a>
-            <img src="./img/IMG_2116.jpg" alt="anya" width="235px" height="580px">
-          </li>
-          <li>
-            <a href="#yoru">ヨル<img src="./img/IMG_2117.jpg" alt="yoru" width="235px" height="580px"></a>
-          </li>
-        </ul> -->
+        <div class="container-chara-all">
+          <a href="#loid" id="loid-name">
+            <div class="fileter"></div>
+            <div class="chara-text">ロイド</div>
+          </a>
+          <a href="#anya" id="anya-name">
+            <div class="fileter"></div>
+            <div class="chara-text">アーニャ</div>
+          </a>
+          <a href="#yoru" id="yoru-name">
+            <div class="fileter"></div>
+            <div class="chara-text">ヨル</div>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <!-- キャラクター説明 -->
+    <section class="animation">
       <!-- ロイド -->
       <div id="loid">
         <ul class="loid character-text">
@@ -156,7 +107,7 @@
     </section>
 
     <!-- favorite seane -->
-    <section>
+    <section class="animation">
       <h1 id="favorite">FAVORITE SEANE</h1>
       <div class="container-fv">
         <img src="./img/190703spyfamily06.jpeg" alt="favorite" width="400px" height="800px">
@@ -167,13 +118,13 @@
     </section>
 
     <!-- song -->
-    <section>
+    <section class="animation">
       <h1 id="song">SONG</h1>
       <div class="container-song">
         <ul class="ohige">
           <li>
             <a href="https://www.youtube.com/watch?v=CbH2F0kXgTY"><img src="./img/op.jpeg" alt="Mixed nuts" class="hige"
-                width="700px" height="400px"></a>
+                width="650px" height="400px"></a>
           </li>
           <li class="songtitle">OPテーマ:「ミックスナッツ」Official髭男dism</li>
         </ul>
@@ -181,7 +132,7 @@
       <div class="container-song">
         <ul>
           <li>
-            <a href="https://www.youtube.com/watch?v=URR_Nv-6MZs"><img src="./img/ed.jpeg" alt="comedy"
+            <a href="https://www.youtube.com/watch?v=D_Oyplmhhv0"><img src="./img/ed.jpeg" alt="comedy"
                 class="hosinogen"></a>
           </li>
           <li class="songtitle">EDテーマ:「喜劇」星野源</li>
@@ -192,6 +143,9 @@
   <footer>
     <span>&copy;2022 spy family</span>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
