@@ -222,10 +222,7 @@ h1 {
   text-align: center;
 }
 
-//  共通部分ここまで
-
-// ロイド
-#loid-name {
+.all-character {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -234,6 +231,13 @@ h1 {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+
+//  共通部分ここまで
+
+// ロイド
+#loid-name {
+  @extend .all-character;
 
   &:hover {
     .chara-text {
@@ -248,7 +252,7 @@ h1 {
 
 // アーニャ
 #anya-name {
-  @extend #loid-name;
+  @extend .all-character;
 
   &:hover {
     .chara-text {
@@ -263,7 +267,7 @@ h1 {
 
 // ヨル
 #yoru-name {
-  @extend #loid-name;
+  @extend .all-character;
 
   &:hover {
     .chara-text {
@@ -276,8 +280,8 @@ h1 {
   }
 }
 
-// ロイド説明
-#loid {
+// 説明の共通部分
+.all-explation {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -285,29 +289,40 @@ h1 {
   width: 100%;
   margin-bottom: 100px;
   position: relative;
+}
+
+.all-explation-position {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+// ここまで共通
+
+// ロイド説明
+#loid {
+  @extend .all-explation;
 
   .loid {
-    position: absolute;
-    top: 20%;
-    left: 10%;
+    @extend .all-explation-position;
   }
 }
 
 // アーニャ説明
 #anya {
-  @extend #loid;
+  @extend .all-explation;
 
   .anya {
-    @extend .loid;
+    @extend .all-explation-position;
   }
 }
 
 // ヨル説明
 #yoru {
-  @extend #loid;
+  @extend .all-explation;
 
   .yoru {
-    @extend .loid;
+    @extend .all-explation-position;
   }
 }
 

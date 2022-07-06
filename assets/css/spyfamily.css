@@ -204,7 +204,7 @@ h1 {
   text-align: center;
 }
 
-#loid-name, #anya-name, #yoru-name {
+.all-character, #loid-name, #anya-name, #yoru-name {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,11 +215,11 @@ h1 {
   overflow: hidden;
 }
 
-#loid-name:hover .chara-text, #anya-name:hover .chara-text, #yoru-name:hover .chara-text {
+#loid-name:hover .chara-text {
   left: 27%;
 }
 
-#loid-name:hover .fileter, #anya-name:hover .fileter, #yoru-name:hover .fileter {
+#loid-name:hover .fileter {
   right: 0;
 }
 
@@ -239,7 +239,7 @@ h1 {
   right: 0;
 }
 
-#loid, #anya, #yoru {
+.all-explation, #loid, #anya, #yoru {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -249,7 +249,7 @@ h1 {
   position: relative;
 }
 
-#loid .loid, #anya .loid, #yoru .loid, #anya .anya, #yoru .yoru {
+.all-explation-position, #loid .loid, #anya .anya, #yoru .yoru {
   position: absolute;
   top: 20%;
   left: 10%;
