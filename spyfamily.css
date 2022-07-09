@@ -46,8 +46,8 @@
 @media screen and (max-width:780px) {
 
   .whole{
-    background-image: url(./img/spy-f.jpeg);
-    background-size: contain;
+    background-color: rgb(2, 137, 33);
+    background-image: url();
   }
 
   /* character */
