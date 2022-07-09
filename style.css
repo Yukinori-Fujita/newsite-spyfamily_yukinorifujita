@@ -65,7 +65,9 @@
 }
 
 .link a:hover {
-  background-color: white;
+  background-image: url(./img/anya-top.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: black;
   border: solid 1px black;
 }

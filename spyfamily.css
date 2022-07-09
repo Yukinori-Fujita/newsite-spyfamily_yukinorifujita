@@ -45,6 +45,10 @@
 
 @media screen and (max-width:780px) {
 
+  .whole{
+    background-image: url(./img/spy-f.jpeg);
+  }
+
   /* character */
 
   .container-chara img {
