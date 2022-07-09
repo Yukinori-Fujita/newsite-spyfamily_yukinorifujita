@@ -47,6 +47,7 @@
 
   .whole{
     background-image: url(./img/spy-f.jpeg);
+    background-size: contain;
   }
 
   /* character */

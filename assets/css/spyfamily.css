@@ -275,7 +275,7 @@ h1 {
 
 @media screen and (max-width: 767px) {
   .all-explation, #loid, #anya, #yoru {
-    height: 20vh;
+    height: 27vh;
     position: static;
   }
 }
