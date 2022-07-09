@@ -360,10 +360,18 @@ h1 {
   font-size: 30px;
   font-family: 'Reggae One', cursive;
   /* margin-bottom: 50px; */
-
   li {
     margin-bottom: 30px;
-    color: white;
+    color: black;
+
+    small{
+      color: red;
+    }
+
+    @include sp-screen{
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
   }
 }
 
