@@ -9,6 +9,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  /* filter: contrast(90%); */
 }
 
 /* ここからcharacter */
@@ -50,54 +51,60 @@
     padding: 0;
   }
 
-  .slideshow {
+  /* .slideshow {
     display: block;
     height: 210vh;
-  }
+  } */
 
   .character-text {
     position: static;
     font-size: 15px;
   }
 
-  #loid,
-  #anya,
-  #yoru {
-    height: 0%;
-  }
-
   #loid {
     margin-top: 50px;
+    height: 20vh;
+    position: static;
+  }
+  #anya {
+    margin-top: 50px;
+    height: 20vh;
+    position: static;
+  }
+  #yoru {
+    margin-top: 50px;
+    height: 20vh;
+    position: static;
   }
 
 
   /* favorite */
-  .container-fv {
+  /* .container-fv {
     display: block;
-  }
+  } */
 
-  .container-fv p {
+  /* .container-fv p {
     margin-top: 100px;
     padding: 10px;
     font-size: 20px;
-  }
+  } */
 
-  .container-fv img {
+  /* .container-fv img {
     margin-left: 0px;
-  }
+  } */
 
   /* song */
-  .container-song ul {
+  /* .container-song ul {
     display: block;
-  }
+  } */
 
-  .hige {
+  /* .hige {
     width: 400px;
     height: 250px;
     margin-right: 0;
-  }
-
+  } */
+/* 
   .hosinogen {
     margin-left: 0;
-  }
+  } */
 }

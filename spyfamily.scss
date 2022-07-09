@@ -21,7 +21,7 @@ header {
       @include sp-screen {
         font-size: 13px;
         position: fixed;
-        top: 85px;
+        top: 130px;
         right: -250px;
         color: white;
         transition: right 1s ease;
@@ -188,6 +188,16 @@ h1 {
   position: relative;
   width: 80%;
   margin: 0 auto;
+
+  @include sp-screen {
+    width: 100%;
+  }
+
+  img {
+    @include sp-screen {
+      padding: 0;
+    }
+  }
 }
 
 .container-chara-all {
@@ -206,6 +216,10 @@ h1 {
   top: 0;
   right: -101%;
   transition: all 0.5s ease;
+
+  @include sp-screen {
+    display: none;
+  }
 }
 
 // キャラクターテキスト
@@ -220,6 +234,10 @@ h1 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16px;
   text-align: center;
+
+  @include sp-screen {
+    display: none;
+  }
 }
 
 .all-character {
@@ -231,6 +249,8 @@ h1 {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+
+  @include sp-screen {}
 }
 
 //  共通部分ここまで
@@ -289,12 +309,21 @@ h1 {
   width: 100%;
   margin-bottom: 100px;
   position: relative;
+
+  @include sp-screen{
+    height: 20vh;
+    position: static;
+  }
 }
 
 .all-explation-position {
   position: absolute;
   top: 20%;
   left: 10%;
+
+  @include sp-screen{
+    position: static;
+  }
 }
 
 // ここまで共通
@@ -337,6 +366,7 @@ h1 {
     color: white;
   }
 }
+
 // ここまで共通
 
 //  favorite
@@ -346,8 +376,19 @@ h1 {
   /* justify-content: space-around; */
   margin-bottom: 200px;
 
+  @include sp-screen {
+    display: block;
+  }
+
   img {
     margin-left: 50px;
+    width: 100%;
+    height: 800px;
+
+    @include sp-screen {
+      margin-left: 0px;
+      height: auto;
+    }
   }
 
   p {
@@ -358,6 +399,11 @@ h1 {
     font-size: 30px;
     color: white;
     background-color: rgba(0, 0, 0, 0.1);
+
+    @include sp-screen {
+      font-size: 16px;
+      margin: 100px 25px 0;
+    }
   }
 
   small {
@@ -373,18 +419,33 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include sp-screen {
+      display: block;
+    }
   }
 
   .ohige {
     flex-direction: row-reverse;
+
+    .hige {
+      margin-right: 30px;
+      width: 650px;
+      height: 400px;
+
+      @include sp-screen {
+        margin-right: 0;
+        height: 300px;
+      }
+    }
   }
 
   .hosinogen {
     margin-left: 30px;
-  }
 
-  .hige {
-    margin-right: 30px;
+    @include sp-screen {
+      margin-left: 0;
+    }
   }
 
   .songtitle {

@@ -15,7 +15,7 @@ header {
   header .header-right {
     font-size: 13px;
     position: fixed;
-    top: 85px;
+    top: 130px;
     right: -250px;
     color: white;
     transition: right 1s ease;
@@ -175,6 +175,18 @@ h1 {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  .container-chara {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-chara img {
+    padding: 0;
+  }
+}
+
 .container-chara-all {
   margin-bottom: 100px;
   display: flex;
@@ -191,6 +203,12 @@ h1 {
   transition: all 0.5s ease;
 }
 
+@media screen and (max-width: 767px) {
+  .fileter {
+    display: none;
+  }
+}
+
 .chara-text {
   width: 110px;
   height: 100px;
@@ -202,6 +220,12 @@ h1 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .chara-text {
+    display: none;
+  }
 }
 
 .all-character, #loid-name, #anya-name, #yoru-name {
@@ -273,8 +297,23 @@ h1 {
   margin-bottom: 200px;
 }
 
+@media screen and (max-width: 767px) {
+  .container-fv {
+    display: block;
+  }
+}
+
 .container-fv img {
   margin-left: 50px;
+  width: 100%;
+  height: 800px;
+}
+
+@media screen and (max-width: 767px) {
+  .container-fv img {
+    margin-left: 0px;
+    height: auto;
+  }
 }
 
 .container-fv p {
@@ -285,6 +324,13 @@ h1 {
   font-size: 30px;
   color: white;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 767px) {
+  .container-fv p {
+    font-size: 16px;
+    margin: 100px 25px 0;
+  }
 }
 
 .container-fv small {
@@ -301,16 +347,37 @@ h1 {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .container-song ul {
+    display: block;
+  }
+}
+
 .container-song .ohige {
   flex-direction: row-reverse;
+}
+
+.container-song .ohige .hige {
+  margin-right: 30px;
+  width: 650px;
+  height: 400px;
+}
+
+@media screen and (max-width: 767px) {
+  .container-song .ohige .hige {
+    margin-right: 0;
+    height: 300px;
+  }
 }
 
 .container-song .hosinogen {
   margin-left: 30px;
 }
 
-.container-song .hige {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .container-song .hosinogen {
+    margin-left: 0;
+  }
 }
 
 .container-song .songtitle {
